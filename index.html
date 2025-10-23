@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homecare Plumbers | Professional and Experienced Plumbing & Heating</title>
+    <style>
+        :root {
+            --primary: #009688;
+            --primary-light: #4db6ac;
+            --primary-dark: #00796b;
+            --secondary: #455a64;
+            --secondary-light: #718792;
+            --secondary-dark: #1c313a;
+            --accent: #ffd54f;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --dark: #212121;
+            --gray: #757575;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+        
+        header.sticky {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-top {
+            background-color: var(--primary-dark);
+            padding: 10px 0;
+            color: var(--white);
+        }
+        
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-info-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .header-info-item i {
+            margin-right: 5px;
+            color: var(--accent);
+        }
+        
+        .header-social a {
+            color: var(--white);
+            margin-left: 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .header-social a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: var(--white);
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            display: block;
+            font-size: 12px;
+            color: var(--gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--secondary-dark);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 0;
+            transition: color 0.3s;
+            display: block;
+        }
+        
+        header.sticky nav ul li a {
+            color: var(--secondary-dark);
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--primary);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        .nav-button {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .nav-button i {
+            margin-right: 8px;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/800') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            padding-top: 80px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 650px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 24px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-55%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .section-header {
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--secondary-dark);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 16px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .about-image-main {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .about-image-main img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover .about-image-main img {
+            transform: scale(1.05);
+        }
+        
+        .about-image-accent {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: -30px;
+            right: -30px;
+            background-color: var(--primary-light);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        .experience-badge {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            width: 120px;
+            height: 120px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-dark);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .experience-badge span:first-child {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .experience-badge span:last-child {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: var(--secondary-dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .about-feature-icon {
+            color: var(--primary);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .about-feature-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--secondary-dark);
+        }
+        
+        .about-feature-text p {
+            color: var(--gray);
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--primary);
+            transition: height 0.3s ease;
+            z-index: 1;
+        }
+        
+        .service-card:hover::before {
+            height: 10px;
+        }
+        
+        .service-card-header {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-card-header img {
+            transform: scale(1.1);
+        }
+        
+        .service-card-body {
+            padding: 30px;
+            position: relative;
+        }
+        
+        .service-icon {
+            position: absolute;
+            top: -30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card-body h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary-dark);
+        }
+        
+        .service-card-body p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+        
+        .read-more i {
+            transition: transform 0.3s;
+        }
+        
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            background-color: var(--white);
+        }
+        
+        .why-us-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .why-us-text {
+            flex: 1;
+        }
+        
+        .why-us-text h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: var(--secondary-dark);
+        }
+        
+        .why-us-text p {
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+        
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .why-us-item {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .why-us-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .why-us-item i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+        
+        .why-us-item:hover i {
+            color: var(--white);
+        }
+        
+        .why-us-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--secondary-dark);
+            transition: color 0.3s;
+        }
+        
+        .why-us-item:hover h4 {
+            color: var(--white);
+        }
+        
+        .why-us-item p {
+            margin-bottom: 0;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+        
+        .why-us-item:hover p {
+            color: var(--white);
+        }
+        
+        .why-us-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .why-us-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Projects */
+        .projects {
+            background-color: var(--light);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .project-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: var(--white);
+        }
+        
+        .project-overlay h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .project-category {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/400') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        .cta .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .cta .btn-white {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+        }
+        
+        .cta .btn-white:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 100px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--primary-light);
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            color: var(--gray);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author-info h4 {
+            font-size: 18px;
+            color: var(--secondary-dark);
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .testimonial-rating {
+            color: #ffc107;
+            margin-top: 10px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-info-card {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .contact-info-card h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-icon {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--accent);
+            font-size: 20px;
+        }
+        
+        .contact-info-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info-text p, .contact-info-text a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info-text a:hover {
+            color: var(--accent);
+        }
+        
+        .contact-social {
+            margin-top: 30px;
+        }
+        
+        .contact-social h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .contact-social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .contact-social-icons a:hover {
+            background-color: var(--accent);
+            color: var(--secondary-dark);
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--secondary-dark);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+            border-radius: 20px;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-dark);
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .footer-top {
+            padding-bottom: 60px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-widget h4 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .footer-widget h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .footer-contact-icon {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-contact-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-bottom {
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+                padding: 10px 0;
+                border-top: 1px solid #eee;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 15px;
+            }
+            
+            .about-content, .why-us-content {
+                flex-direction: column;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-padding {
+                padding: 70px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 30px;
+            }
+            
+            .about-image-accent {
+                display: none;
+            }
+            
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container header-top-content">
+                <div class="header-info">
+                    <div class="header-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Us Today</span>
+                    </div>
+                    <div class="header-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@homecareplumbers.com</span>
+                    </div>
+                </div>
+                <div class="header-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">
+                    <div class="logo-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <div class="logo-text">
+                        Homecare Plumbers
+                        <span>Professional Plumbing & Heating</span>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:" class="nav-button"><i class="fas fa-phone"></i> Free Quote</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Expert <span>Plumbing, Boiler, & Bathroom</span> Solutions for Your Home</h1>
+            <p>Homecare Plumbers offers prompt, professional, and reliable plumbing and heating services with transparent, flat-rate pricing and exceptional quality.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+                <a href="#services" class="btn btn-outline">Our Services</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>About Homecare Plumbers</h2>
+                <p>Learn more about our dedication to reliable and professional plumbing and heating services.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-main">
+                        <img src="/api/placeholder/600/400" alt="Homecare Plumbers Team">
+                    </div>
+                    <div class="about-image-accent"></div>
+                    <div class="experience-badge">
+                        <span>5+</span>
+                        <span>Years</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Professional Plumbing, Gas, and Boiler Specialists</h3>
+                    <p>Homecare Plumbers provides comprehensive, trustworthy plumbing and heating solutions for homeowners. Our team of skilled, Gas Safe registered engineers is dedicated to fixing your plumbing issues quickly, professionally, and with complete transparency.</p>
+                    <p>From emergency leak repairs and blocked drains to boiler servicing and full bathroom refurbishments, we cover all aspects of home plumbing and gas work. We pride ourselves on punctual service, clear communication, and flat-rate pricing to ensure peace of mind.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Fixed, Transparent Pricing</h4>
+                                <p>No hidden fees. We provide clear, fixed pricing before any work begins.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Gas Safe Registered Engineers</h4>
+                                <p>Fully qualified and certified to handle all boiler and gas work safely and expertly.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="about-feature-text">
+                                <h4>Reliable & Punctual Service</h4>
+                                <p>We respect your time—our team arrives when we say we will.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Book an Engineer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Plumbing & Heating Services</h2>
+                <p>We offer a comprehensive range of solutions, from emergency repairs to full installations.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Emergency Plumbing">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Emergency Plumbing Repairs</h3>
+                        <p>Fast, 24/7 response for burst pipes, major leaks, and urgent blockages to protect your home.</p>
+                        <a href="#" class="read-more">Book Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Boiler Installation and Service">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Boiler Service & Repair</h3>
+                        <p>Diagnosis, repair, and annual servicing for all major boiler brands by Gas Safe engineers.</p>
+                        <a href="#" class="read-more">Book a Service <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Blocked Drains and Pipes">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-sink"></i>
+                        </div>
+                        <h3>Blocked Drains & Toilets</h3>
+                        <p>Efficient unblocking and cleaning for all internal and external drain issues using professional equipment.</p>
+                        <a href="#" class="read-more">Get Help <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Bathroom Refurbishment">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                        <h3>Full Bathroom Installations</h3>
+                        <p>Complete project management for bathroom and wet room refurbishments, from design to final tiling and plumbing.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Water Heater Installation">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <h3>Hot Water Cylinder Services</h3>
+                        <p>Installation, repair, and maintenance for hot water cylinders, including unvented systems.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <img src="/api/placeholder/400/300" alt="Tap and Pipe Repair">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>General Plumbing Repairs</h3>
+                        <p>Fixing leaking taps, repairing faulty pipes, toilet issues, shower installations, and more.</p>
+                        <a href="#" class="read-more">Book Repair <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Why Choose Homecare Plumbers</h2>
+                <p>Reliability, transparency, and expertise are the foundations of our service.</p>
+            </div>
+            <div class="why-us-content">
+                <div class="why-us-text">
+                    <h3>Your Trusted Local Plumbing Experts</h3>
+                    <p>We believe in providing a stress-free experience. Our flat-rate pricing means you know the cost upfront, and our commitment to punctuality ensures your day isn't interrupted. We use only high-quality parts and techniques, guaranteeing durable results that last.</p>
+                    <div class="why-us-grid">
+                        <div class="why-us-item">
+                            <i class="fas fa-tag"></i>
+                            <h4>Flat-Rate Pricing</h4>
+                            <p>Fixed transparent prices, so no hourly surprises or hidden costs.</p>
+                        </div>
+                        <div class="why-us-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Punctual Service</h4>
+                            <p>We show up on time and complete the job efficiently and reliably.</p>
+                        </div>
+                        <div class="why-us-item">
+                            <i class="fas fa-user-shield"></i>
+                            <h4>Trustworthy & Reliable</h4>
+                            <p>A company you can trust, with a strong reputation for excellent service.</p>
+                        </div>
+                        <div class="why-us-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <h4>Gas Safe Experts</h4>
+                            <p>Specialists in boiler, central heating, and gas appliance services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-image">
+                    <img src="/api/placeholder/600/600" alt="Professional Plumber Working">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Work in Action</h2>
+                <p>See examples of our quality plumbing, heating, and bathroom projects.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="New Boiler Installation">
+                        <div class="project-overlay">
+                            <span class="project-category">Heating & Gas</span>
+                            <h3>High-Efficiency Boiler Upgrade</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="Bathroom Refurbishment">
+                        <div class="project-overlay">
+                            <span class="project-category">Bathroom</span>
+                            <h3>Full Modern Bathroom Remodel</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="Pipe Repair">
+                        <div class="project-overlay">
+                            <span class="project-category">Plumbing Repair</span>
+                            <h3>Major Water Leak Fix</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/300" alt="Wet Room Installation">
+                        <div class="project-overlay">
+                            <span class="project-category">Wet Room</span>
+                            <h3>Accessible Wet Room Installation</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Need a Plumber or Heating Engineer?</h2>
+            <p>Don't wait! Contact Homecare Plumbers for prompt, professional service and transparent pricing today.</p>
+            <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>What Our Clients Say</h2>
+                <p>Read testimonials from our satisfied customers highlighting reliability and professionalism.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I recently used Homecare Plumbing Services and was extremely impressed with their professionalism and quality of work... The plumber arrived on time, clearly explained the issue, and completed the repair efficiently... Pricing was transparent with no hidden fees."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="/api/placeholder/60/60" alt="Hassaan Awan">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Hassaan Awan</h4>
+                            <p>Verified Customer</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Javid was excellent, he quickly diagnosed the issue with my Keston boiler... and replaced the faulty valve... He was punctual, knowledgeable, and explained everything clearly. The system’s working perfectly now. I’d highly recommend him..."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="/api/placeholder/60/60" alt="Anna Evans">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Anna Evans</h4>
+                            <p>Verified Customer</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The only number I keep for plumbing. These guys always answer the phone, they have fixed transparent pricing and most importantly they are punctual, professional and always get the job done. Highly recommend."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="/api/placeholder/60/60" alt="Hamza Sadique">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>Hamza Sadique</h4>
+                            <p>Local Guide</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Contact Homecare Plumbers</h2>
+                <p>Get in touch for prompt service, a free quote, or to discuss your heating and plumbing needs.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Our Address</h4>
+                                <p>Flat 54 Bovis House 142, Northolt Rd, Harrow, HA2 0EG</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Call Us</h4>
+                                <a href="tel:">Call for a free quote</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Email Us</h4>
+                                <a href="mailto:info@homecareplumbers.com">info@homecareplumbers.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                                <p>Sunday: Emergency Service Only</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h4>Follow Us</h4>
+                            <div class="contact-social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Request a Call Back or Quote</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" selected disabled>Select Service</option>
+                                <option value="Emergency Plumbing">Emergency Plumbing</option>
+                                <option value="Boiler Service/Repair">Boiler Service/Repair</option>
+                                <option value="Blocked Drains">Blocked Drains</option>
+                                <option value="Bathroom Refurbishment">Bathroom Refurbishment</option>
+                                <option value="General Plumbing Repair">General Plumbing Repair</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Briefly describe your issue or request" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-grid">
+                    <div class="footer-widget footer-about">
+                        <h4>About Homecare Plumbers</h4>
+                        <p>Homecare Plumbers is your trusted local expert for all plumbing, heating, and gas needs. We offer fixed, transparent pricing and reliable service across our coverage area.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                            <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h4>Our Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Emergency Plumbing</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Boiler Service & Repair</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Blocked Drains</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Bathroom Installation</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Hot Water Cylinders</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> General Plumbing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h4>Contact Information</h4>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="footer-contact-text">
+                                Flat 54 Bovis House 142, Northolt Rd, Harrow, HA2 0EG
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="footer-contact-text">
+                                Call for a free quote
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="footer-contact-text">
+                                info@homecareplumbers.com
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="footer-contact-text">
+                                www.homecareplumbers.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Homecare Plumbers Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
